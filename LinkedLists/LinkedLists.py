@@ -32,7 +32,12 @@ class LinkedList:
 
 
 
-# Your MyLinkedList object will be instantiated and called as such:
+def addAtHead(self, val: int) -> None:
+    newNode = Node(val)
+    newNode.next = self.head
+    self.head = newNode
+
+
 myList = LinkedList()
 
 node1 = Node(12)
@@ -56,13 +61,7 @@ param_1 = myList.get(0)
 print("\n")
 print(param_1)
 
-# obj.addAtHead(val)
-# obj.addAtTail(val)
-# obj.addAtIndex(index,val)
-# obj.deleteAtIndex(index)
 
-    # def addAtHead(self, val: int) -> None:
-    #     newHead = Node(val)
 
     # def addAtTail(self, val: int) -> None:
 
@@ -70,6 +69,14 @@ print(param_1)
 
     # def deleteAtIndex(self, index: int) -> None:
             
+
+# Your MyLinkedList object will be instantiated and called as such:
+# obj = MyLinkedList()
+# obj.addAtHead(val)
+# obj.addAtTail(val)
+# obj.addAtIndex(index,val)
+# obj.deleteAtIndex(index)
+
 
 # list = LinkedList()
 # print("\nInitial list: ")
