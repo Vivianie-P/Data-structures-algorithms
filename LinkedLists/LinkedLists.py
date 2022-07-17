@@ -30,45 +30,83 @@ class LinkedList:
             currIdx += 1
         return currNode.data
 
+    def addAtHead(self, val: int) -> None:
+        newNode = Node(val)
+        newNode.next = self.head
+        self.head = newNode
 
 
-def addAtHead(self, val: int) -> None:
-    newNode = Node(val)
-    newNode.next = self.head
-    self.head = newNode
+    def addAtTail(self, val: int) -> None:
+        new_node = Node(val)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            currNode = self.head
+            while (currNode.next):
+                currNode = currNode.next
+            currNode.next = new_node
 
 
-myList = LinkedList()
+    def addAtIndex(self, index: int, val: int) -> None:
+        currIdx = 0
+        currNode = self.head
 
-node1 = Node(12)
-node2 = Node(88)
-node3 = Node(19)
-node4 = Node(42)
-node5 = Node(26)
-node6 = Node(34)
+        if index == 0:
+            self.addAtHead(val)
+            return
+        elif index < 0:
+            print("ERROR: Invaild Index!")
+            return
 
-node1.next = node2
-node2.next = node3
-node3.next = node4
-node4.next = node5
-node5.next = node6
-node6.next = None
+        while currIdx < index -1:
+            if currNode is None:
+                print("ERROR: Index is 3 more larger than the length of list!")
+                return
+            currNode = currNode.next
+            currIdx += 1
+        
 
-myList.head = node1
+        if currNode == None:
+            print("ERROR: Index is larger than the length of list by 2!")
+            return
 
-myList.print_list()
-param_1 = myList.get(0)
-print("\n")
-print(param_1)
+        nodeAtIndex = currNode.next
+
+        if nodeAtIndex is None:
+            print("ERROR: Index is larger than the length of list by 1!")
+            return
+        
+        if nodeAtIndex.next is None:
+            self.addAtTail(val)
+
+        newNode = Node(val)
+        newNode.next = nodeAtIndex
+        currNode.next = newNode
 
 
+    def deleteAtIndex(self, index: int) -> None:
+        currIdx = 0
+        currNode = self.head
+        leadNode = self.head.next
 
-    # def addAtTail(self, val: int) -> None:
+        if currIdx == index:
+            self.head = leadNode
+            return
+        
+        while currIdx != index -1:
+            if currNode is None:
+                print("ERROR: Index is larger than the list")
+                return
 
-    # def addAtIndex(self, index: int, val: int) -> None:
-
-    # def deleteAtIndex(self, index: int) -> None:
+            currNode = currNode.next
+            leadNode = leadNode.next
+            currIdx += 1
             
+        currNode.next = leadNode.next
+
+
+
 
 # Your MyLinkedList object will be instantiated and called as such:
 # obj = MyLinkedList()
@@ -77,6 +115,48 @@ print(param_1)
 # obj.addAtIndex(index,val)
 # obj.deleteAtIndex(index)
 
+
+myList = LinkedList()
+
+node1 = Node(1)
+
+myList.head = node1
+
+myList.print_list()
+print("\n\nAdding some more nodes:")
+myList.addAtTail(2)
+myList.addAtTail(3)
+myList.addAtTail(4)
+myList.addAtTail(5)
+myList.print_list()
+
+# print("\n\nAdding a Node at valid index (0):")
+# myList.addAtIndex(0, 10)
+# myList.print_list()
+
+# print("\n\nAdding a Node at valid index (1):")
+# myList.addAtIndex(1, 12)
+# myList.print_list()
+
+# print("\n\nIndex larger by 1!")
+# myList.addAtIndex(7, 25)
+# myList.print_list()
+
+# print("\n\nIndex larger by 2!")
+# myList.addAtIndex(8, 25)
+# myList.print_list()
+
+# print("\n\nIndex larger by 3!")
+# myList.addAtIndex(9, 25)
+# myList.print_list()
+
+print("\n\n Deleting last index in list")
+myList.deleteAtIndex(4)
+myList.print_list()
+
+print("\n\n Deleting first index in list")
+myList.deleteAtIndex(0)
+myList.print_list()
 
 # list = LinkedList()
 # print("\nInitial list: ")
