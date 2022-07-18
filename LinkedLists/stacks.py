@@ -15,7 +15,8 @@ class MinStack:
     def top(self) -> int:
         return self.elements[-1]
 
-    # def getMin(self) -> int:
+    def getMin(self) -> int:
+        return min(self.elements)
 
 stack = MinStack()
 print(stack.__dict__)
