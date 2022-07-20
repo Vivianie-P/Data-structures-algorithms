@@ -24,4 +24,5 @@ print(stack.__dict__)
 stack.push(3)
 stack.push("testing")
 print(stack.top())
-# print(stack.pop())
+print(stack.pop())
+
