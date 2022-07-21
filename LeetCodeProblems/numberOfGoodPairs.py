@@ -13,7 +13,7 @@ seen
 """
 
 
-def numIdenticalPairs(self, nums: List[int]) -> int:
+def numIdenticalPairs(nums: List[int]) -> int:
     pair_counter = 0
     my_dict = {}
     
