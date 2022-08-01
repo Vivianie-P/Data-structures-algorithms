@@ -1,5 +1,19 @@
 """
--
+- Given a string of words this function finds thw lengt5h of the last 
+word in the string.
+- Two lists were made; one to hold the the current word in the string
+and the other list is used to get the length of the last word in the
+string
+- An edgecase is accounted for if the sring has multiple spaces at the 
+beginning & end of the string.
+- This function has a loop that checks if the element is the last 
+element in the string if it is then the element is being counted and
+being added to an empty list to then be returned. 
+- There are also two other solutions to this question commented out this
+summary is of the burte force solution
+- Complexity
+    Time - O(n) where n is the length of the given string
+    Space - O(n) where n is the amount of elements in the new list
 """
 
 

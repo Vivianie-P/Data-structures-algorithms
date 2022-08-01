@@ -1,5 +1,16 @@
 """
--
+- Given an integer this function checks of the int is a palindrome 
+- Because int's are immutable the int is first stringifyed so it can
+be iterable
+- Then this function has two pointers; one that points to the first 
+index and another that point to the last index
+- The pointers act as indexes to compare the values at that index and 
+to see if we have iterated through the entire string.
+- The loop iterates through the string and returns a boolean value to
+see if the string is a palindrome or not
+- Complexity
+    Time - 
+    Space - 
 """
 
 
