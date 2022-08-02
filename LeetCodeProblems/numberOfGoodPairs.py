@@ -20,17 +20,19 @@ def numIdenticalPairs(nums: List[int]) -> int:
     for idx, val in enumerate(nums):
         if val in my_dict:
             pair_counter += my_dict[val]
+            print("\n pair counter:", pair_counter)
             my_dict[val] += 1
+            print("val in my dictionary", my_dict[val])
         else:
             my_dict[val] = 1
             
     return pair_counter
 
 nums = [1,2,3,1,1,3]
-print("Test 1:", numIdenticalPairs(nums))
+print("\n Test 1:", numIdenticalPairs(nums))
 
-nums = [1, 1, 1, 1]
-print("Test 2:", numIdenticalPairs(nums))
+# nums = [1, 1, 1, 1]
+# print("Test 2:", numIdenticalPairs(nums))
 
-nums = [1, 2, 3, 4, 5]
-print("Test 1:", numIdenticalPairs(nums))
+# nums = [1, 2, 3, 4, 5]
+# print("Test 1:", numIdenticalPairs(nums))

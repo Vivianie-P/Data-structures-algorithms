@@ -28,11 +28,11 @@ def longestCommonPrefix(strs: List[str]) -> str:
     return prefix
 
 
-strs = ["dog","racecar","car"]
-print(longestCommonPrefix(strs))
+# strs = ["dog","racecar","car"]
+# print(longestCommonPrefix(strs))
 
 strs = ["flower","flow","flight"]
 print(longestCommonPrefix(strs))
 
-strs = ["insert", "inspection", "infiltrate"]
-print(longestCommonPrefix(strs))
+# strs = ["insert", "inspection", "infiltrate"]
+# print(longestCommonPrefix(strs))

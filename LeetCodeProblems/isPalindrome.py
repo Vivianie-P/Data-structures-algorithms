@@ -9,8 +9,8 @@ to see if we have iterated through the entire string.
 - The loop iterates through the string and returns a boolean value to
 see if the string is a palindrome or not
 - Complexity
-    Time - 
-    Space - 
+    Time - O(n) where n is the number of elements that gets iterated over
+    Space - O(1) no extra memory is being used
 """
 
 
