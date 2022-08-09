@@ -1,7 +1,16 @@
 from typing import List
 
 """
--
+- You are given an array prices where prices[i] is the price 
+of a given stock on that day.
+- You want to maximize your profit by choosing a single day to buy one stock 
+and choosing a different day in the future to sell that stock.
+- Three variables are made left and right being pointers and maxp being the 
+maximum profit on thats specifc day
+- Looped through the list then compared elements at the first and second indexes
+to then perform the subtraction to retrieve the 
+
+
 """
 
 def maxProfit(prices: List[int]) -> int:
