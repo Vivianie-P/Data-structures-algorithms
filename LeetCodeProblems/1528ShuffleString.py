@@ -9,6 +9,7 @@ def restoreString(s: str, indices: List[int]) -> str:
     # for i in s:
     #     hashmap[i] = 1
     #     print(hashmap)
+    
     answer = ""
 
     for i in range(len(indices)):
