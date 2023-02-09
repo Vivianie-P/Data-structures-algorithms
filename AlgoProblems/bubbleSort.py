@@ -1,14 +1,14 @@
 from typing import List
 
 def bubbleSort(array):
-    sorted = False
+    isSorted = False
 
-    while not sorted:
-        sorted = True
+    while not isSorted:
+        isSorted = True
         for x in range(len(array) - 1):
             if array[x] > array[x+1]:
                 array[x], array[x+1] = array[x+1], array[x]
-                sorted = False
+                isSorted = False
     return array
 
 
