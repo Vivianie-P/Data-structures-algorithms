@@ -19,3 +19,4 @@ def generateDocument(characters, document):
 characters = "Bste!hetsi ogEAxpelrt x "
 document = "AlgoExpert is the Best!"
 print(generateDocument(characters, document))
+
