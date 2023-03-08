@@ -1,17 +1,26 @@
+homeTeamWon = 1
 def tournamentWinner(competitions, results):
     currWinner = ""
-    teamPoints = {}
+    teamPoints = {currWinner: 0}
 
-    for homeTeam, awayTeam in competitions:
-        if homeTeam not in teamPoints:
-            teamPoints[homeTeam] = 0
-        else:
-            teamPoints[homeTeam] += 3
-        if awayTeam not in teamPoints:
-            teamPoints[awayTeam] = 0
-        else:
-            teamPoints[awayTeam] += 3
-    print(teamPoints)
+    for idx, competition in enumerate(competitions):
+        result = results[idx]
+        homeTeam, awayTeam = competition
+
+        winningTeam = homeTeam if result == homeTeamWon else awayTeam
+
+        updateScores(winningTeam, 3, teamPoints)
+
+        if teamPoints[winningTeam] > teamPoints[currWinner]:
+            currWinner = winningTeam
+    
+    return currWinner
+
+def updateScores(team, points, teamPoints):
+    if team not in teamPoints:
+        teamPoints[team] = 0
+    
+    teamPoints[team] += points
 
 
 competitions = [
