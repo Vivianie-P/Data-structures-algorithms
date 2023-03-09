@@ -1,15 +1,19 @@
 from typing import List
 
 def insertionSort(array):
+# because this sorting alogrithm is inserting the numbers in front of
+# themselves that is why this for loop starts at 1 instead of 0
     for i in range(1, len(array)):
         j = i
         while j > 0 and array[j] < array[j - 1]:
-            swap(j, j - 1, array)
+            # swap(j, j - 1, array)
+            array[j], array[j - 1] = array[j - 1], array[j]
             j -= 1
+            
     return array
 
-def swap(i, j, array):
-    array[i], array[j] = array[j], array[i]
+# def swap(i, j, array):
+#     array[i], array[j] = array[j], array[i]
 
 
 
