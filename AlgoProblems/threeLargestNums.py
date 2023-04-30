@@ -1,6 +1,6 @@
 # This function is simpler way to slove the same problem with finding
 # the three largest numbers with the mindset to remove the largest
-# numbers as you loop through the given array and then 
+# numbers from the given array as you loop through and then 
 # append throse values to the output array and then return it. 
 #def findThreeLargestNumbers(array):
 #     output = []

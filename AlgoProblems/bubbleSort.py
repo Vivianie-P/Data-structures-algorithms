@@ -2,13 +2,16 @@ from typing import List
 
 def bubbleSort(array):
     isSorted = False
+    swapCounter = 0
 
     while not isSorted:
         isSorted = True
-        for x in range(len(array) - 1):
-            if array[x] > array[x+1]:
-                array[x], array[x+1] = array[x+1], array[x]
+        for i in range(len(array) - 1 - swapCounter):
+            if array[i] > array[i + 1]:
+                array[i], array[i + 1] = array[i + 1], array[i]
                 isSorted = False
+        swapCounter += 1
+
     return array
 
 
